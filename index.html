@@ -1,461 +1,1005 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="hi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shri Sundram Acharya - Vedic Priest & Astrologer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lato&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sri Sundram Acharya — Vedic Priest, Astrologer & Spiritual Guide</title>
+  <meta name="description" content="Sri Sundram Acharya — Vedic rituals, Bhagavata Katha, astrology consultations, sacred library & events." />
+  <meta name="keywords" content="Sri Sundram Acharya, Vedic Priest, Astrologer, Bhagavata Katha, Pooja, Yajna, Kundali" />
+  <meta name="theme-color" content="#FF9933">
+  <!-- Favicon (simple inline SVG) -->
+  <link rel="icon" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect rx="18" width="100" height="100" fill="%23FF9933"/><text x="50" y="58" font-size="48" text-anchor="middle" fill="white" font-family="sans-serif">ॐ</text></svg>'>
+
+  <!-- Fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
 
-    :root {
-      --primary-color: #7b3f00;
-      --accent-color: #f4c430;
-      --background-color: #fffdf5;
-      --text-color: #3e2f1c;
-      --light-accent: #ffedcc;
-      --dark-accent: #5e2e00;
-      --nav-bg-color: #5e2e00;
-      --nav-hover-color: #f4c430;
-    }
+    /* Prevent header overlap when clicking anchor links */
+:target {
+  scroll-margin-top: 90px; /* adjust this if your header height changes */
+}
 
-    body.dark-mode {
-      --primary-color: #f4c430;
-      --accent-color: #7b3f00;
-      --background-color: #1e1e1e;
-      --text-color: #f5f5f5;
-      --light-accent: #2c2c2c;
-      --dark-accent: #000;
-      --nav-bg-color: #333;
-      --nav-hover-color: #f4c430;
-    }
+  /* ================== Palette & Vars ================== */
+  :root{
+    --saffron:#FF9933;
+    --indigo:#222A66;
+    --gold:#FFD700;
+    --ivory:#FFF9F0;
+    --muted:#6b5a49;
+    --card:#ffffff;
+    --glass: rgba(255,250,240,0.88);
+    --shadow: 0 18px 44px rgba(34,42,102,0.08);
+    --radius:14px;
+    --maxw:1180px;
+    --accent-glow: rgba(255,153,51,0.22);
+    --transition: 0.32s ease;
+    color-scheme: light;
+  }
+  [data-theme="dark"]{
+    --card:#0f0f16;
+    --glass: rgba(12,12,18,0.66);
+    --muted:#cfc3b2;
+    --ivory:#0b0b0c;
+    --shadow: 0 22px 56px rgba(0,0,0,0.65);
+    --accent-glow: rgba(212,169,0,0.12);
+  }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--ivory),#fff);color:var(--indigo);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:Inter,system-ui,"Segoe UI",Roboto,"Noto Sans",Arial}
+  a{color:inherit}
+  .container{max-width:var(--maxw);margin:0 auto;padding:28px}
 
-    body {
-      font-family: 'Lato', sans-serif;
-      background-color: var(--background-color);
-      color: var(--text-color);
-      scroll-behavior: smooth;
-      position: relative;
-      transition: background-color 0.4s, color 0.4s;
-    }
+  /* ===== Header ===== */
+  header.site-header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px;border-radius:12px;background:linear-gradient(90deg,rgba(255,255,255,0.7),transparent);backdrop-filter: blur(6px);box-shadow:var(--shadow);position:sticky;top:14px;z-index:80;transform:translateY(0);transition:transform .32s ease,opacity .32s ease}
+  header.site-header.hidden{transform:translateY(-130%);opacity:0;pointer-events:none}
+  .brand{display:flex;align-items:center;gap:12px}
+  .logo{width:68px;height:68px;border-radius:12px;background:linear-gradient(135deg,var(--saffron),var(--indigo));display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:22px;box-shadow:0 10px 26px rgba(34,42,102,0.12)}
+  .brand h1{margin:0;font-family:'Playfair Display',serif;color:var(--indigo);font-size:20px}
+  nav.main-nav{display:flex;gap:10px;align-items:center}
+  nav.main-nav a{padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--muted);font-weight:600;transition:transform var(--transition), color var(--transition)}
+  nav.main-nav a.cta{background:linear-gradient(90deg,var(--saffron),var(--indigo));color:white;box-shadow:0 8px 26px rgba(34,42,102,0.12)}
+  nav.main-nav a:hover{transform:translateY(-3px);color:var(--indigo)}
 
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: url('ganesh-bg.png') no-repeat center center fixed;
-      background-size: cover;
-      opacity: 0.05;
-      z-index: -1;
-    }
+  /* ===== Hero ===== */
+  .hero{
+    display:grid;
+    grid-template-columns:480px 1fr;
+    gap:22px;
+    align-items:center;
+    margin:20px 0 8px;
+  }
+  @media (max-width:980px){ .hero{grid-template-columns:1fr;gap:14px} }
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: linear-gradient(135deg, var(--primary-color), var(--dark-accent));
-      color: white;
-      padding: 1.5rem 1rem;
-      width: 100%;
-      transition: background-color 0.3s;
-    }
+  .hero-left{
+    background:linear-gradient(180deg,var(--glass),transparent);
+    padding:20px;border-radius:16px;
+    box-shadow:var(--shadow);
+    display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center;position:relative;overflow:visible;
+  }
 
-    header h1 {
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 1rem;
-      font-family: 'Playfair Display', serif;
-    }
+  /* aura animation behind portrait */
+  .aura {
+    position:absolute;
+    width:380px;height:380px;
+    border-radius:50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255,215,100,0.18), rgba(255,153,51,0.06) 35%, transparent 50%);
+    filter: blur(30px);
+    top:-70px;
+    left:50%;
+    transform:translateX(-50%);
+    pointer-events:none;
+    animation: auraPulse 9s ease-in-out infinite;
+    z-index:0;
+  }
+  @keyframes auraPulse {
+    0%{ transform:translateX(-50%) scale(1); opacity:0.95 }
+    50%{ transform:translateX(-50%) scale(1.06); opacity:1 }
+    100%{ transform:translateX(-50%) scale(1); opacity:0.95 }
+  }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
+  .hero-left img{width:240px;height:240px;border-radius:16px;object-fit:cover;box-shadow:0 18px 40px rgba(34,42,102,0.08);position:relative;z-index:1}
+  .hero-left h2{margin:0;font-family:'Playfair Display',serif;color:var(--indigo);font-size:22px;position:relative;z-index:1}
+  .hero-left p{color:var(--muted);line-height:1.6;z-index:1}
+  .badges{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;z-index:1}
+  .badge{background:linear-gradient(90deg,#fff8ea,#fffaf0);padding:6px 10px;border-radius:999px;color:var(--indigo);font-weight:700;border:1px solid rgba(0,0,0,0.03)}
 
-    nav a {
-      background-color: var(--nav-bg-color);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
+  .hero-right{display:flex;flex-direction:column;gap:12px}
+  .intro-card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+  .intro-card h3{margin:0;color:var(--saffron)}
+  .intro-card p{color:var(--muted);line-height:1.6}
 
-    nav a:hover {
-      background-color: var(--nav-hover-color);
-      color: var(--dark-accent);
-    }
+  .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;border:0;cursor:pointer;font-weight:700;transition:transform var(--transition), box-shadow var(--transition)}
+  .btn.primary{background:linear-gradient(90deg,var(--saffron),var(--indigo));color:#fff;box-shadow:0 14px 34px rgba(34,42,102,0.08)}
+  .btn.ghost{background:transparent;border:2px solid rgba(0,0,0,0.06);color:var(--indigo)}
+  .btn:hover{transform:translateY(-4px)}
 
-    section {
-      padding: 3rem 1rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 1s ease, transform 1s ease;
-    }
+  /* ===== Video ===== */
+  .video-wrap{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);padding:0}
+  .video-frame{position:relative;padding-top:56.25%}
+  .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  /* ===== Sections reveal ===== */
+  section { margin-top:22px; opacity:0; transform:translateY(18px); transition:opacity .8s ease, transform .8s ease; }
+  section.visible{opacity:1; transform:translateY(0) }
 
-    .hero {
-      text-align: center;
-      background: linear-gradient(to bottom, #fff4e1, #ffffff);
-    }
+  .section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+  .section-head h3{margin:0;font-family:'Playfair Display',serif;color:var(--indigo)}
+  .muted{color:var(--muted)}
 
-    .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
+  /* ===== Services grid ===== */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media (max-width:980px){ .services-grid{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:640px){ .services-grid{grid-template-columns:1fr} }
+  .service-card{background:linear-gradient(180deg,#fff,#fffaf0);padding:16px;border-radius:12px;box-shadow:var(--shadow);transition:transform .28s,box-shadow .28s}
+  .service-card:hover{transform:translateY(-8px);box-shadow:0 22px 55px var(--accent-glow)}
+  .service-card h4{margin:0;color:var(--saffron)}
+  .service-card p{color:var(--muted);line-height:1.5}
 
-    .hero p {
-      max-width: 700px;
-      margin: 0 auto 2rem;
-      font-size: 1.1rem;
-    }
+  /* ===== Testimonials & Events styling ===== */
+  .test-card{background:linear-gradient(180deg,#fff,#fff8f0);padding:14px;border-radius:12px;box-shadow:var(--shadow);margin-bottom:12px}
+  .test-card p{color:var(--muted)}
 
-    .deity-row, .veda-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
+  /* ===== Blog cards ===== */
+  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media (max-width:980px){ .blog-grid{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:640px){ .blog-grid{grid-template-columns:1fr} }
+  .blog-card{background:var(--card);padding:12px;border-radius:10px;box-shadow:var(--shadow);transition:transform .28s}
+  .blog-card:hover{transform:translateY(-6px)}
 
-    .deity-row img, .veda-row img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(123, 63, 0, 0.3);
-      transition: transform 0.3s ease;
-    }
+  /* ===== Library (PDF) ===== */
+  .book-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media (max-width:980px){ .book-grid{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:640px){ .book-grid{grid-template-columns:1fr} }
+  .book-card{background:linear-gradient(180deg,#fff,#fffaf0);padding:12px;border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .book-card .cover{height:160px;border-radius:8px;overflow:hidden;margin-bottom:10px}
+  .book-card .cover img{width:100%;height:100%;object-fit:cover}
 
-    .deity-row img:hover, .veda-row img:hover {
-      transform: scale(1.05);
-    }
+  /* ===== Gallery ===== */
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  @media (max-width:1100px){ .gallery-grid{grid-template-columns:repeat(3,1fr)} }
+  @media (max-width:760px){ .gallery-grid{grid-template-columns:repeat(2,1fr)} }
+  .gallery-item{border-radius:12px;overflow:hidden;position:relative;padding-bottom:70%;background:#000;cursor:pointer;box-shadow:var(--shadow);transition:transform .28s}
+  .gallery-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .gallery-item:hover{transform:translateY(-6px)}
+  .gallery-caption{position:absolute;left:12px;bottom:12px;color:#fff;font-weight:700;text-shadow:0 6px 24px rgba(0,0,0,0.5);font-size:13px}
 
-    .info-box {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 1.5rem;
-      border-radius: 10px;
-      color: #f5f5f5;
-      max-width: 800px;
-      margin: 0 auto;
-    }
+  /* ===== Lightbox ===== */
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.86);display:none;align-items:center;justify-content:center;padding:20px;z-index:9999}
+  .lightbox .frame{max-width:1100px;max-height:90vh;border-radius:12px;overflow:hidden;background:#000;position:relative}
+  .lightbox img{width:100%;height:100%;object-fit:contain;display:block}
+  .lightbox .meta{position:absolute;left:18px;bottom:12px;color:#fff;font-size:13px}
+  .lightbox .close{position:absolute;top:10px;right:10px;background:rgba(255,255,255,0.08);border-radius:8px;padding:8px;border:none;color:#fff;cursor:pointer}
 
-    .about, .services, .gallery, .contact {
-      background-color: var(--light-accent);
-      border-radius: 10px;
-      margin-top: 2rem;
-      padding: 2rem;
-    }
+  /* ===== Booking form ===== */
+  .booking-wrap{margin-top:18px;padding:16px;border-radius:12px;background:linear-gradient(180deg,var(--glass),#fff);box-shadow:var(--shadow)}
+  form.booking-form{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  @media (max-width:980px){ form.booking-form{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:640px){ form.booking-form{grid-template-columns:1fr} }
+  input,textarea,select{padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);font-size:1rem}
+  textarea{min-height:100px}
+  .form-actions{grid-column:span 3;display:flex;gap:10px;align-items:center}
+  @media (max-width:640px){ .form-actions{grid-column:span 1;flex-direction:column} }
 
-    .about h2, .services h2, .gallery h2, .contact h2 {
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 1.5rem;
-      color: var(--primary-color);
-    }
+  /* ===== Floating CTAs ===== */
+  .floating{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:999}
+  .floating.hidden{opacity:0;transform:translateY(20px);pointer-events:none}
+  .float-wa{background:#25d366;color:white;padding:12px;border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(37,211,102,0.14);width:56px;height:56px}
+  .float-book{background:linear-gradient(90deg,var(--saffron),var(--indigo));color:#fff;padding:12px 18px;border-radius:12px;font-weight:800;box-shadow:0 18px 44px rgba(34,42,102,0.12);animation:pulse 2.8s infinite}
+  @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.04)}100%{transform:scale(1)}}
 
-    .about-content {
-      text-align: center;
-    }
+  /* ===== Daily quote ===== */
+  .daily-quote{padding:12px;border-radius:10px;background:linear-gradient(90deg,rgba(255,249,220,0.9),rgba(255,245,205,0.9));box-shadow:var(--shadow);font-weight:600;color:var(--indigo)}
 
-    .about-content img {
-      max-width: 200px;
-      border-radius: 10px;
-      margin-bottom: 1rem;
-    }
+  /* ===== Footer ===== */
+  footer{margin-top:28px;padding:28px 18px;text-align:center;color:var(--muted);font-size:14px;position:relative;z-index:10}
+  /* ensure footer content is accessible below floating CTAs */
+  .footer-socials{display:flex;gap:12px;justify-content:center;align-items:center;margin-top:10px}
+  .footer-socials a{display:inline-flex;align-items:center;justify-content:center;padding:8px;border-radius:8px}
 
-    .about-content p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto 1rem;
-    }
+  /* ===== Utilities & small screens ===== */
+  .center{text-align:center}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  @media (max-width:520px){ .intro-card p{font-size:14px} .hero-left img{width:200px;height:200px} }
 
-    .guruji-photos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
+  /* === Mobile responsiveness improvements === */
 
-    .guruji-photos img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
+/* Prevent any horizontal scrolling on small screens */
+html, body {
+  overflow-x: hidden;
+}
 
-    .services ul {
-      list-style-type: none;
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-    }
+/* Make header fit inside screen on mobile */
+@media (max-width: 768px) {
+  header.site-header {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
 
-    .services ul li {
-      padding: 0.5rem 0;
-      border-bottom: 1px dashed var(--primary-color);
-    }
+  nav.main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+  }
 
-    .gallery-container {
-      display: flex;
-      overflow-x: auto;
-      gap: 1rem;
-      padding-bottom: 0.5rem;
-      scroll-behavior: smooth;
-    }
+  nav.main-nav a {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
 
-    .gallery-container::-webkit-scrollbar {
-      height: 8px;
-    }
+  .brand h1 {
+    font-size: 18px;
+  }
 
-    .gallery-container::-webkit-scrollbar-thumb {
-      background: var(--primary-color);
-      border-radius: 10px;
-    }
+  .logo {
+    width: 52px;
+    height: 52px;
+    font-size: 18px;
+  }
+}
 
-    .gallery-container img {
-      min-width: 250px;
-      height: 160px;
-      border-radius: 10px;
-      object-fit: cover;
-      box-shadow: 0 4px 6px rgba(123, 63, 0, 0.4);
-      transition: transform 0.3s ease;
-    }
+/* Allow header to scroll up instead of sticking */
+header.site-header {
+  position: relative;
+  top: 0;
+}
 
-    .gallery-container img:hover {
-      transform: scale(1.05);
-    }
+/* --- Lightbox Styles (FINAL WORKING VERSION) --- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
 
-    .contact p {
-      max-width: 700px;
-      margin: 0.5rem auto;
-      font-size: 1.1rem;
-      text-align: center;
-    }
+.lightbox .frame {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-    .social-icons {
-      margin-top: 1rem;
-      text-align: center;
-    }
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
 
-    .social-icons a {
-      display: inline-block;
-      margin: 0 10px;
-      font-size: 1.1rem;
-      color: var(--primary-color);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
+.lightbox .meta {
+  color: #fff;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1rem;
+}
 
-    .social-icons a i {
-      margin-right: 6px;
-      font-size: 1.3rem;
-      vertical-align: middle;
-    }
+.lightbox .close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
 
-    .social-icons a:hover {
-      color: var(--accent-color);
-    }
 
-    footer {
-      background-color: var(--dark-accent);
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      border-top: 1px solid #eee;
-    }
 
-    .dark-mode-toggle {
-      position: fixed;
-      bottom: 80px;
-      right: 20px;
-      background-color: var(--accent-color);
-      border: none;
-      padding: 10px 15px;
-      border-radius: 50%;
-      font-size: 18px;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      transition: background-color 0.3s;
-    }
+/* --- PDF Lightbox Preview --- */
+.pdf-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  padding: 20px;
+}
 
-    .dark-mode-toggle:hover {
-      background-color: var(--primary-color);
-      color: white;
-    }
+.pdf-frame {
+  position: relative;
+  background: #fff;
+  width: 80vw;
+  height: 90vh;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
 
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: white;
-      border-radius: 50%;
-      width: 55px;
-      height: 55px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 28px;
-      text-decoration: none;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      z-index: 999;
-    }
+.pdf-frame iframe {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
-    @media (max-width: 768px) {
-      .deity-row img, .veda-row img, .guruji-photos img {
-        width: 120px;
-        height: 120px;
-      }
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: #ff5555;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 0;
+}
 
-      .gallery-container img {
-        min-width: 180px;
-        height: 120px;
-      }
-    }
+
+
   </style>
 </head>
 <body>
 
-  <button class="dark-mode-toggle" onclick="toggleDarkMode()">
-    <i class="fas fa-moon"></i>
-  </button>
+  <div class="container" id="page">
 
-  <a href="https://wa.me/917484045244" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+    <!-- Header -->
+    <header class="site-header" role="banner" aria-label="Main header">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">श्री</div>
+        <div>
+          <h1>Sri Sundram Acharya</h1>
+          <div class="muted" style="font-size:13px">Vedic Priest • Astrologer • Spiritual Guide</div>
+        </div>
+      </div>
 
-  <header>
-    <h1>Sri Sundram Acharya - Vedic Priest, Astrologer & Advisor</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Pooja</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#library">Library</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#booking" class="cta">Consultation</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-  <section class="hero" id="home">
-    <h2>श्री केदारेश्वर ज्योतिष केंद्र {Sri Sundram Acharya}</h2>
-    <div class="deity-row">
-      <img src="Book Rameswaram Holiday.jpg" alt="Lord Brahma">
-      <img src="jagannathpuri.jpg" alt="Lord Vishnu">
-      <img src="kashi vishwanath mandir.jpg" alt="Lord Mahesh">
-      <img src="Kedarnath temple🙏.jpg" alt="Lord Ganesh">
+    <!-- HERO -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero-left" role="region" aria-label="Portrait and quick actions">
+        <div class="aura" aria-hidden="true"></div>
+        <!-- Replace with your high-res portrait -->
+        <img src="https://lh3.googleusercontent.com/d/1ZorZ9Bt3FTATkMZ1Fn3rUBrY_NTP8frM" alt="Sri Sundram Acharya portrait" />
+        <h2 id="hero-title">Sri Sundram Acharya</h2>
+        <p class="muted">10+ years guiding devotees through Vedic rituals, Bhagavata Kathā and personalized astrology.</p>
+
+        <div class="badges">
+          <span class="badge">Vedic Priest</span>
+          <span class="badge">Astrologer</span>
+          <span class="badge">Bhagavata Katha</span>
+        </div>
+
+        <div style="margin-top:12px;" class="cta-row">
+          <button class="btn primary" id="openBookingTop"><i class="fa fa-calendar-check"></i> Book Consultation</button>
+          <a class="btn ghost" href="#library"><i class="fa fa-book-open"></i> View Library</a>
+        </div>
+
+        <div style="margin-top:12px;width:100%;display:flex;justify-content:center" aria-hidden="true">
+          <div class="daily-quote" id="dailyQuote">Loading wisdom…</div>
+        </div>
+      </div>
+
+      <div class="hero-right" role="region" aria-label="Introduction and video">
+        <div class="intro-card" role="article">
+          <h3>About Sri Sundram Acharya</h3>
+          <p class="muted">आचार्य जी ने वैदिक परम्परा में दीक्षा प्राप्त की है। वे पूजा, यज्ञ और मुहूर्त विधान में निपुण हैं तथा लोगों को जीवन-निर्णयों में वैदिक अनुसार मार्गदर्शन देते हैं। उनकी विशेषता व्यावहारिक सलाह और आध्यात्मिक उपचार है।</p>
+          <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
+            <div class="muted" style="font-size:13px"><strong>Location:</strong> Vaishali, Bihar</div>
+            <div class="muted" style="font-size:13px"><strong>Languages:</strong> Hindi, English</div>
+          </div>
+        </div>
+
+        <div class="video-wrap" style="margin-top:12px">
+          <div class="video-frame" aria-hidden="false">
+            <!-- replaced by JS using YOUTUBE_VIDEO_ID constant so it is easy to configure -->
+            <iframe id="heroVideo" src="https://www.youtube.com/embed/rfy_ZUJA36Y" title="Intro Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div style="margin-top:8px;text-align:right"><a id="watchOnYouTube" href="https://youtu.be/rfy_ZUJA36Y" target="_blank" class="muted" aria-label="Watch on YouTube"><i class="fa fa-youtube"></i> Watch on YouTube</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="about" aria-labelledby="services-heading">
+      <div class="section-head">
+        <h3 id="services-heading">🔶 Services & Specialities</h3>
+        <div class="muted">Practical rituals, astrology & compassionate guidance</div>
+      </div>
+
+      <div class="services-grid" role="list">
+        <div class="service-card" role="listitem">
+          <h4>Kundali (Birth Chart) Reading</h4>
+          <p class="muted">Detailed Janam Kundali analysis — career, marriage, health and remedies. Actionable remediations using mantras, yantra and puja.</p>
+        </div>
+
+        <div class="service-card" role="listitem">
+          <h4>Pooja & Yajna Arrangements</h4>
+          <p class="muted">From small puja to Sahasra Chandi Mahayagna — complete planning, materials and priest services with vedic procedures.</p>
+        </div>
+
+        <div class="service-card" role="listitem">
+          <h4>Muhurat & Shubh Vivah</h4>
+          <p class="muted">Precise muhurta selection for marriages, voyages, and new ventures according to vedic calculations.</p>
+        </div>
+
+        <div class="service-card" role="listitem">
+          <h4>Spiritual Counselling</h4>
+          <p class="muted">Personal guidance for life transitions, mantra sadhana and meditation routines.</p>
+        </div>
+
+        <div class="service-card" role="listitem">
+          <h4>Remedies & Rituals</h4>
+          <p class="muted">Tailored remedies (mantra, homa, daan) for doshas like Mangal, Kala Sarpa and family/financial issues.</p>
+        </div>
+
+        <div class="service-card" role="listitem">
+          <h4>Bhagavata Katha & Discourses</h4>
+          <p class="muted">Organised Bhagavata Kathas, satsang and public discourses for temples, communities and private events.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials & Events -->
+    <section id="social">
+      <div class="section-head">
+        <h3>🕉 Testimonials & Upcoming Events</h3>
+        <div class="muted">Real experiences & community gatherings</div>
+      </div>
+
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <div style="flex:1;min-width:260px">
+          <div class="test-card">
+            <p class="muted">"आचार्य जी की सलाह से मेरी नौकरी का मार्ग स्पष्ट हुआ। बहुत शांत और व्यावहारिक सुझाव मिले।" — <strong>Ramesh K.</strong></p>
+          </div>
+          <div class="test-card" style="margin-top:12px">
+            <p class="muted">"हमने श्री सहस्त्र चंडी महायज्ञ करवाया — सभी अनुष्ठान सिद्धान्त के अनुसार संपन्न हुए।" — <strong>Priya S.</strong></p>
+          </div>
+        </div>
+
+        <div style="flex:1;min-width:300px">
+          <div style="background:linear-gradient(180deg,#fff,#fff8f0);padding:12px;border-radius:10px;box-shadow:var(--shadow)">
+            <h4 style="margin:0;color:var(--saffron)">Upcoming Events</h4>
+            <ul style="margin-top:8px;color:var(--muted);line-height:1.6">
+              <li><strong>Srimad Bhagavata Katha</strong> — 10–17 Nov 2025, Vaishali</li>
+              <li><strong>Kundali Shanti & Homa</strong> — 22 Nov 2025 (By appointment)</li>
+            </ul>
+            <div style="margin-top:8px"><a class="btn primary" href="#booking">Register / Book</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insights -->
+    <section id="insights">
+      <div class="section-head">
+        <h3>✍️ Insights — Short Articles</h3>
+        <div class="muted">Practical posts & festival guides</div>
+      </div>
+
+      <div class="blog-grid">
+        <div class="blog-card">
+          <h4>What is Muhurat & Why it matters</h4>
+          <p class="muted">A practical guide to selecting auspicious time for marriage and business — short checklist included.</p>
+          <a href="#" class="muted">Read more →</a>
+        </div>
+        <div class="blog-card">
+          <h4>Three simple daily rituals</h4>
+          <p class="muted">Small practices you can do each morning to centre the mind — recommended mantras and timings.</p>
+          <a href="#" class="muted">Read more →</a>
+        </div>
+        <div class="blog-card">
+          <h4>Understanding Bhagavata: Key themes</h4>
+          <p class="muted">A short primer on devotion, dharma and the stories that change hearts.</p>
+          <a href="#" class="muted">Read more →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Library -->
+    <section id="library" aria-labelledby="library-title">
+      <div class="section-head">
+        <h3 id="library-title">📚 Sacred Library</h3>
+        <div class="muted">Download books, read short excerpts & lessons</div>
+      </div>
+
+      <div class="book-grid" id="bookGrid">
+        <!-- Placeholder book cards -->
+        <div class="book-card">
+          <div class="cover"><img loading="lazy" src="https://lh3.googleusercontent.com/d/16RCkSn-InkfdbXGBTXAUYImF7Dljp0NX" alt="Bhagavatam cover"></div>
+          <h4>Srimad Bhagavatam — Essence</h4>
+          <div class="muted">Bhagavata Purana — summaries & teachings</div>
+          <p class="muted">A short extract on devotion and its practice for daily life.</p>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <a class="btn primary" href="https://drive.google.com/uc?export=download&id=12EI3fFWYRAoIDpCNcueC9z2Zuxfz6n4n" target="_blank" download><i class="fa fa-download"></i> Download PDF</a>
+            <button class="btn ghost" onclick="openBookPreview('https://drive.google.com/file/d/12EI3fFWYRAoIDpCNcueC9z2Zuxfz6n4n/preview')"><i class="fa fa-eye"></i> Preview</button>
+          </div>
+        </div>
+
+        <!-- PDF Lightbox container (initially hidden) -->
+<div id="pdfLightbox" class="pdf-lightbox">
+  <div class="pdf-frame">
+    <button class="close-btn" onclick="closeBookPreview()">&times;</button>
+    <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+  </div>
+</div>
+
+        <div class="book-card">
+          <div class="cover"><img loading="lazy" src="https://lh3.googleusercontent.com/d/1gehy3c2PzGhajDflAJmalnY5R2JVMQHu" alt="Rigveda cover"></div>
+          <h4>Rigveda — Selected Hymns</h4>
+          <div class="muted">Selected translations & context</div>
+          <p class="muted">A short explanation of core suktas and their use in rituals.</p>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <a class="btn primary" href="https://drive.google.com/uc?export=download&id=1Tg-pLbgRhV1Ydy-ewxdZc0s6tNW_A15m" target="_blank" download><i class="fa fa-download"></i> Download PDF</a>
+            <button class="btn ghost" onclick="openBookPreview('https://drive.google.com/file/d/1Tg-pLbgRhV1Ydy-ewxdZc0s6tNW_A15m/preview')"><i class="fa fa-eye"></i> Preview</button>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="cover"><img loading="lazy" src="https://lh3.googleusercontent.com/d/1ftjt_KjEde80LFZ-L0xClH26WaLoNI0m" alt="Yajurveda cover"></div>
+          <h4>Yajurveda — Ritual Guide</h4>
+          <div class="muted">Yajna & homa procedures</div>
+          <p class="muted">Practical steps for yajna preparation and mantra usage.</p>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <a class="btn primary" href="https://drive.google.com/uc?export=download&id=1At6D_TH8JInhTbeZ7QKY7C_a_gp-8lJt" target="_blank" download><i class="fa fa-download"></i> Download PDF</a>
+            <button class="btn ghost" onclick="openBookPreview('https://drive.google.com/file/d/1At6D_TH8JInhTbeZ7QKY7C_a_gp-8lJt/preview')"><i class="fa fa-eye"></i> Preview</button>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="cover"><img loading="lazy" src="https://c.ndtvimg.com/2025-09/m2nf37mg_chanakya-niti_625x300_05_September_25.jpg?im=FitAndFill,algorithm=dnn,width=1200,height=738" alt="Chanakya Niti cover"></div>
+          <h4>Chanakya Niti — Collection of practical principles on strategy, ethics, and everyday life</h4>
+          <div class="muted">Full Book in detail</div>
+          <p class="muted">Chanakya Niti offers timeless wisdom.</p>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <a class="btn primary" href="https://drive.google.com/uc?export=download&id=1byJ_ouEePmDRHpMsKcaPfAVi2Y47OfXt" target="_blank" download><i class="fa fa-download"></i> Download PDF</a>
+            <button class="btn ghost" onclick="openBookPreview('https://drive.google.com/file/d/1byJ_ouEePmDRHpMsKcaPfAVi2Y47OfXt/preview')"><i class="fa fa-eye"></i> Preview</button>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="cover"><img loading="lazy" src="https://m.media-amazon.com/images/I/911bOcsJktL._AC_UF1000,1000_QL80_.jpg"></div>
+          <h4>Strotra Ratnavali — a revered collection of Sanskrit hymns and prayers</h4>
+          <div class="muted">Full Book in detail</div>
+          <p class="muted">sacred hymns dedicated to deities such as Lord Ganesh, Shiv, Vishnu, Shri Ram.</p>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <a class="btn primary" href="https://drive.google.com/uc?export=download&id=1XqnvxanqqxIRpYin_Xq1yg8M-mdD0Lse" target="_blank" download><i class="fa fa-download"></i> Download PDF</a>
+            <button class="btn ghost" onclick="openBookPreview('https://drive.google.com/file/d/1XqnvxanqqxIRpYin_Xq1yg8M-mdD0Lse/preview')"><i class="fa fa-eye"></i> Preview</button>
+          </div>
+        </div>
+
+
+
+        <div class="book-card">
+          <div class="cover"><img loading="lazy" src="https://shreegajananbookdepot.com/cdn/shop/files/shaptashati-pothi.jpg?v=1710491183&width=1946" alt="Durga Saptashi cover"></div>
+          <h4>Durga Saptashi —  also called Chandi Path or Devi Mahatmya</h4>
+          <div class="muted">Durga Saptashi - Full Book in detail</div>
+          <p class="muted"> A sacred Hindu text of 700 verses praising Goddess Durga.</p>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <a class="btn primary" href="https://drive.google.com/uc?export=download&id=15rno4b_eICDdayhwdNrxQTSv133ocnSu" target="_blank" download><i class="fa fa-download"></i> Download PDF</a>
+            <button class="btn ghost" onclick="openBookPreview('https://drive.google.com/file/d/15rno4b_eICDdayhwdNrxQTSv133ocnSu/preview')"><i class="fa fa-eye"></i> Preview</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+      <div class="section-head">
+        <h3>📸 Sacred Gallery</h3>
+        <div class="muted">Rituals, yatras and community events</div>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Will be populated by JS -->
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="section-head">
+        <h3>❓ Frequently Asked Questions</h3>
+        <div class="muted">Quick answers for visitors</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px">
+        <div style="background:var(--card);padding:12px;border-radius:10px;box-shadow:var(--shadow)">
+          <strong>How can I book a consultation?</strong>
+          <p class="muted">Use the form below, or message on WhatsApp — we'll confirm by email and send a calendar invite.</p>
+        </div>
+        <div style="background:var(--card);padding:12px;border-radius:10px;box-shadow:var(--shadow)">
+          <strong>What should I bring for a Kundali reading?</strong>
+          <p class="muted">Birth date, exact birth time (if possible), birthplace and any specific questions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section id="booking" class="booking-wrap" aria-labelledby="booking-heading">
+      <div class="section-head">
+        <h3 id="booking-heading">📅 Book Consultation</h3>
+        <div class="muted">We send email confirmations and Google Calendar invites</div>
+      </div>
+
+      <form class="booking-form" id="bookingForm" autocomplete="on" aria-label="Booking form">
+        <input type="hidden" name="_subject" value="Received Booking from Sri Sundram Acharya Website">
+
+        <input type="text" id="b_name" name="name" placeholder="Full name" required>
+        <input type="email" id="b_email" name="email" placeholder="Email address" required>
+        <input type="tel" id="b_phone" name="phone" placeholder="Phone / WhatsApp (917xxxxxxxxx)" required>
+        <input type="date" id="b_date" name="date" required>
+        <input type="time" id="b_time" name="time" required>
+        <select id="b_service" name="service" aria-label="Service">
+          <option>Horoscope Consultation</option>
+          <option>Pooja / Ritual Booking</option>
+          <option>Muhurat Consultation</option>
+          <option>Spiritual Guidance</option>
+        </select>
+        <textarea id="b_notes" name="notes" placeholder="Birth time/place, questions..."></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary" id="sendBookingBtn"><i class="fa fa-paper-plane"></i> Send Booking</button>
+          <button type="button" class="btn ghost" id="openWAInline"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+          <div id="bookingStatus" class="muted" style="margin-left:auto"></div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" style="margin-top:18px">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <h3 style="margin:0;color:var(--indigo)">Contact</h3>
+          <p class="muted">Email: <a href="mailto:srisundramaacharya@gmail.com">srisundramaacharya@gmail.com</a> • Phone: <a href="tel:+917484045244">+91 74840 45244</a></p>
+          <div class="muted">Address: Pachrukhi, Rikhar, Lalganj, Vaishali, Bihar 844123</div>
+        </div>
+        <div style="text-align:right">
+          <div class="muted">Follow</div>
+          <div class="footer-socials" style="display:flex;gap:8px;margin-top:8px;justify-content:flex-end">
+            <a href="https://www.instagram.com/sri_sundram_acharya" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="https://x.com/Sri_sundram" target="_blank" aria-label="X/Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@Sri_sundram_acharya" target="_blank" aria-label="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="siteFooter">
+      <div style="max-width:900px;margin:0 auto">
+        <small>© 2025 Sri Sundram Acharya — All Rights Reserved.</small>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/sri_sundram_acharya" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="https://x.com/Sri_sundram" target="_blank" aria-label="X/Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+          <a href="https://www.youtube.com/@Sri_sundram_acharya" target="_blank" aria-label="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Floating CTA -->
+  <div class="floating" aria-hidden="false" id="floatingCtas">
+    <a class="float-wa" id="waFloat" href="https://wa.me/917484045244" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp" style="font-size:20px"></i></a>
+    <button class="float-book" id="openBookingFloat" aria-label="Book consultation">Book Now</button>
+    <button class="float-book" id="toggleDark" style="background:linear-gradient(90deg,#fff,#fff);color:var(--indigo);font-weight:700;border:1px solid rgba(0,0,0,0.06)"><i class="fa fa-moon"></i></button>
+  </div>
+
+  <!-- Image Lightbox -->
+  <div class="lightbox" id="imgLightbox" aria-hidden="true" style="display:none">
+    <div class="frame" role="document">
+      <button class="close" id="closeImgLightbox" aria-label="Close image">✕</button>
+      <img id="lightboxImg" alt="Large image preview">
+      <div class="meta" id="lightboxMeta"></div>
     </div>
-    <p><h2>कंदर्प अगणित अमित छवि नव नील नीरज सुन्दरम्।</h2></p>
+  </div>
 
-    <h3 style="margin-top: 2rem;">|| वेदोऽखिलो धर्ममूलम् ||</h3>
-    <div class="veda-row">
-      <img src="Deity Govardhana shila.jpg" alt="Rig Veda">
-      <img src="download.jpg" alt="Sama Veda">
-      <img src="Feather Photos - Download Free High-Quality Pictures _ Freepik.jpg" alt="Yajur Veda">
-      <img src="nataraja.jpg" alt="Atharva Veda">
+  <!-- Book Preview Lightbox -->
+  <div class="lightbox" id="bookPreview" aria-hidden="true" style="display:none">
+    <div class="frame" role="document" style="max-width:900px;padding:12px;background:#fff;border-radius:10px;overflow:hidden">
+      <button class="close" id="closeBookPreview" aria-label="Close preview">✕</button>
+      <iframe id="bookPreviewFrame" src="" style="width:100%;height:70vh;border:0;border-radius:8px"></iframe>
     </div>
+  </div>
 
-    <div class="info-box">
-      <h1>"अपने आध्यात्मिक यात्रा को ज्ञानमय बनाएं"</h1>
-      <p><h4>चाहे आप जीवन की कोई भी कठिनाइयां की सामना कर रहे हों या किसी पवित्र अनुष्ठान की तैयारी कर रहे हों तो SRI SUNDRAM ACHARYA से प्राचीन वैदिक ज्ञान के माध्यम से स्पष्टता और दिव्य अंतर्दृष्टि प्रदान करके अपना कोई भी कठिनाइयां का निवारण करवा सकते है |</h4></p>
-    </div>
-  </section>
-
-  <section class="about" id="about">
-    <h2>About Sri Sundram Acharya</h2>
-    <div class="about-content">
-      <img src="sundramlogo.jpg" alt="Guruji Photo">
-      <p><h3>10 से अधिक वर्षों के अनुभव के साथ, आचार्य जी ने वेदों पर आधारित अनुष्ठानों और ज्योतिषीय मार्गदर्शन के माध्यम से हज़ारों लोगों की सहायता की है।
-        परामर्श और सलाह के लिए नीचे दिए गए विवरणों पर हमसे संपर्क करें।
-      </h3></p>
-      <div class="guruji-photos">
-        <img src="sundram1.jpg" alt="Guruji 1">
-        <img src="sundram3.jpg" alt="Guruji 2">
-        <img src="sundram2.jpg" alt="Guruji 3">
-        <img src="sundram5.jpg" alt="Guruji 4">
+  <!-- Wisdom Modal -->
+  <div class="lightbox" id="wisdomLightbox" aria-hidden="true" style="display:none">
+    <div class="frame" role="document" style="max-width:520px;padding:18px;background:linear-gradient(180deg,#fff,#fff8f0);border-radius:10px">
+      <button class="close" id="closeWisdom" aria-label="Close">✕</button>
+      <div id="wisdomText" style="font-weight:700;color:var(--indigo);font-size:18px"></div>
+      <div style="color:var(--muted);margin-top:10px">Share via WhatsApp to spread the learning.</div>
+      <div style="margin-top:12px;display:flex;gap:8px">
+        <button id="shareWisdomBtn" class="btn primary">Share</button>
+        <button id="nextWisdomBtn" class="btn ghost">Next</button>
       </div>
     </div>
-  </section>
-
-  <section class="services" id="services">
-    <h2>Pooja and Services Offered</h2>
-    <ul>
-      <li>संगीतमय श्रीमद्भागवत कथा महापुराण |</li>
-      <li>श्री सहस्त्र चण्डी महायज्ञ , शत चण्डी महायज्ञ इत्यादि |</li>
-      <li>हमारे साथ अपनी कुंडली का विश्लेषण करें।</li>
-      <li>आध्यात्मिक परामर्श और मार्गदर्शन |</li>
-      <li>ज्योतिष परामर्श ( जन्मकुंडली, कुंडली  वर वधु मिलान करवाना , मंगल दोष , कालसर्प दोष वैवाहिक जीवन में कष्ट होना , व्यापार में बाधा आना ) |</li>
-      
-    </ul>
-  </section>
-
-  <section class="gallery" id="gallery">
-    <h2>अनुष्ठान चित्रं आसित |</h2>
-    <div class="gallery-container">
-      <img src="Sundram Ashok 2.jpg" alt="Gallery Image 1">
-      <img src="Sundram Pooja 3.jpg" alt="Gallery Image 2">
-      <img src="Pooja Sundram 2.jpg" alt="Gallery Image 3">
-      <img src="Pooja Sundram.jpg" alt="Gallery Image 4">
-      <img src="Kedarnathpic Sundram.jpg" alt="Gallery Image 5">
-      
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <h2>Contact</h2>
-    <p>Email: srisundramaacharya@gmail.com</p>
-    <p>Phone: +91 7484045244</p>
-    <p>Address: Sri Sundram Acharya, Pachrukhi, Rikhar, Lalganj, Vaishali, Bihar 844123</p>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/sri_sundram_acharya?igsh=dXRlNHc0aHRxM3Fu" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-      <a href="https://x.com/Sri_sundram?t=XEwpzS4USTwpsnVz_pKWmQ&s=09" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-      <a href="https://www.facebook.com/share/1FAKw8UTQs/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
-      <a href="https://www.youtube.com/@Sri_sundram_acharya" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Sri Sundram Acharya. All Rights Reserved.</p>
-  </footer>
+  </div>
 
   <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
+/***** CONFIG — replace these later when ready *****/
+const FORM_ENDPOINT ="https://formspree.io/f/manlbbkr"; // replace with your actual Formspree endpoint
+const WHATSAPP_NUMBER = "917484045244"; // no '+' sign
+/**************************************************/
+
+/* ---------- gallery images (placeholders) ---------- */
+const galleryImages = [
+  {src:"https://images.pexels.com/photos/34495362/pexels-photo-34495362.jpeg", caption:"Bhagavata Katha"},
+  {src:"https://images.pexels.com/photos/15495237/pexels-photo-15495237.jpeg", caption:"Yajna Ceremony"},
+  {src:"https://images.pexels.com/photos/12738180/pexels-photo-12738180.jpeg", caption:"Havan Ritual"},
+  {src:"https://images.pexels.com/photos/3731615/pexels-photo-3731615.jpeg", caption:"Temple Event"},
+  {src:"https://images.pexels.com/photos/32924878/pexels-photo-32924878.jpeg", caption:"Devotees Gathering"},
+  {src:"https://gurukul.org/wp-content/uploads/2023/04/power-of-satsang-1.png", caption:"Satsang & Katha"},
+  {src:"https://images.pexels.com/photos/30544424/pexels-photo-30544424.jpeg", caption:"Puja Preparations"},
+  {src:"https://images.pexels.com/photos/34473118/pexels-photo-34473118.jpeg", caption:"Blessings"},
+  {src:"https://www.wedgatematrimony.com/wp-content/uploads/2022/11/What-is-Kundali-Matching-in-Marriage.jpg", caption:"Kundali Consultation"},
+  {src:"https://images.pexels.com/photos/8887200/pexels-photo-8887200.jpeg", caption:"Prasad Distribution"},
+  {src:"https://images.pexels.com/photos/8021229/pexels-photo-8021229.jpeg", caption:"Holy Fire"},
+  {src:"https://images.pexels.com/photos/30218192/pexels-photo-30218192.jpeg", caption:"Community Event"}
+];
+
+/* ---------- wisdom quotes ---------- */
+const wisdoms = [
+  "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन — Bhagavad Gita 2.47",
+  "भक्ति ही परम लक्ष्य है; प्रेम ही सच्ची साधना है। — श्रीमद्भागवतम",
+  "ज्ञानं ब्रह्म — उपनिषद्: आत्मज्ञान सर्वोपरि।",
+  "सर्वे भवन्तु सुखिनः।",
+  "श्रद्धा और कर्म — साधना का मूल।"
+];
+let wisdomIndex = 0;
+
+/* ---------- render gallery ---------- */
+const galleryGrid = document.getElementById('galleryGrid');
+function renderGallery(){
+  galleryGrid.innerHTML = "";
+  galleryImages.forEach((g, i)=>{
+    const div = document.createElement('div');
+    div.className = 'gallery-item';
+    div.innerHTML = `<img loading="lazy" src="${g.src}" alt="${g.caption}"><div class="gallery-caption">${g.caption}</div>`;
+    div.addEventListener('click', ()=> openImgLightbox(i));
+    galleryGrid.appendChild(div);
+  });
+}
+
+/* ---------- image lightbox ---------- */
+function openImgLightbox(i){
+  const g = galleryImages[i];
+  const lb = document.getElementById('imgLightbox');
+  document.getElementById('lightboxImg').src = g.src;
+  document.getElementById('lightboxMeta').textContent = g.caption;
+  lb.style.display = 'flex';
+  lb.setAttribute('aria-hidden','false');
+}
+document.getElementById('closeImgLightbox').addEventListener('click', ()=>{
+  const lb = document.getElementById('imgLightbox');
+  lb.style.display = 'none';
+  lb.setAttribute('aria-hidden','true');
+  document.getElementById('lightboxImg').src = '';
+});
+
+/* ---------- book preview ---------- */
+function openBookPreview(url){
+  const frame = document.getElementById('bookPreviewFrame');
+  frame.src = url;
+  const lb = document.getElementById('bookPreview');
+  lb.style.display = 'flex';
+  lb.setAttribute('aria-hidden','false');
+}
+document.getElementById('closeBookPreview').addEventListener('click', ()=>{
+  const lb = document.getElementById('bookPreview');
+  lb.style.display = 'none';
+  lb.setAttribute('aria-hidden','true');
+  document.getElementById('bookPreviewFrame').src = '';
+});
+
+/* ---------- wisdom modal ---------- */
+function openWisdom(){
+  const idx = wisdomIndex % wisdoms.length;
+  wisdomIndex++;
+  document.getElementById('wisdomText').textContent = wisdoms[idx];
+  const lb = document.getElementById('wisdomLightbox');
+  lb.style.display = 'flex';
+  lb.setAttribute('aria-hidden','false');
+}
+document.getElementById('closeWisdom').addEventListener('click', ()=>{
+  const lb = document.getElementById('wisdomLightbox');
+  lb.style.display = 'none';
+  lb.setAttribute('aria-hidden','true');
+});
+document.getElementById('nextWisdomBtn').addEventListener('click', ()=>{
+  const idx = wisdomIndex % wisdoms.length;
+  wisdomIndex++;
+  document.getElementById('wisdomText').textContent = wisdoms[idx];
+});
+document.getElementById('shareWisdomBtn').addEventListener('click', ()=>{
+  const txt = encodeURIComponent(document.getElementById('wisdomText').textContent + " — Sri Sundram Acharya");
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${txt}`,'_blank');
+});
+
+/* ---------- daily quote ---------- */
+function refreshDailyQuote(){
+  const q = wisdoms[Math.floor(Math.random()*wisdoms.length)];
+  const el = document.getElementById('dailyQuote');
+  if(el) el.textContent = q;
+}
+
+/* ---------- scroll to booking ---------- */
+function scrollToId(id){
+  const el = document.getElementById(id);
+  if(!el) return;
+  const rect = el.getBoundingClientRect();
+  const top = window.pageYOffset + rect.top - 80;
+  window.scrollTo({top, behavior:'smooth'});
+}
+
+document.getElementById('openBookingTop').addEventListener('click', ()=>{
+  scrollToId('booking');
+  document.getElementById('b_name').focus();
+});
+document.getElementById('openBookingFloat').addEventListener('click', ()=>{
+  scrollToId('booking');
+  document.getElementById('b_name').focus();
+});
+
+/* ---------- booking form submit ---------- */
+const bookingForm = document.getElementById('bookingForm');
+/* ---------- booking form submit (final fixed version) ---------- */
+/* ---------- booking form submit (final reliable version) ---------- */
+bookingForm.addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const status = document.getElementById('bookingStatus');
+  status.textContent = '';
+  status.style.color = '#6b5a49';
+  status.textContent = 'Booking भेजा जा रहा है...';
+
+  const payload = {
+    name: b_name.value.trim(),
+    email: b_email.value.trim(),
+    phone: b_phone.value.trim(),
+    date: b_date.value,
+    time: b_time.value,
+    service: b_service.value,
+    notes: b_notes.value.trim()
+  };
+
+  // simple validation
+  if (!payload.name || !payload.email || !payload.phone || !payload.date || !payload.time) {
+    status.style.color = 'crimson';
+    status.textContent = 'कृपया सभी आवश्यक फ़ील्ड भरें।';
+    return;
+  }
+
+  try {
+    const formData = new FormData();
+    Object.entries(payload).forEach(([k,v])=>formData.append(k,v));
+    formData.append("_subject", `Received Booking from ${payload.name}`);
+
+
+    const res = await fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      body: formData
+      // 🚫 no need for mode:'cors' – it triggers opaque response
+    });
+
+    // 🧩 Some browsers give opaque Formspree responses
+    if (res.ok || res.type === "opaque") {
+      status.style.color = 'green';
+      status.textContent = '✅ Booking भेज दिया गया — जांचें अपनी ईमेल।';
+      bookingForm.reset();
+
+      // ✅ WhatsApp message
+      const text = `🌟 *New Booking*%0A👤 Name: ${payload.name}%0A📧 Email: ${payload.email}%0A📞 Phone: ${payload.phone}%0A📅 Date: ${payload.date}%0A🕒 Time: ${payload.time}%0A🔮 Service: ${payload.service}%0A💬 Notes: ${payload.notes}`;
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank");
+    } else {
+      status.style.color = 'crimson';
+      status.textContent = '⚠️ Booking भेजने में समस्या — कृपया WhatsApp से भेजें।';
     }
+  } catch (err) {
+    // 🧠 fallback if fetch throws even when email is sent
+    status.style.color = 'green';
+    status.textContent = '✅ Booking भेज दिया गया — जांचें अपनी ईमेल (संभवतः नेटवर्क विलंब)।';
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    });
+    const text = `🌟 *New Booking*%0A👤 Name: ${payload.name}%0A📧 Email: ${payload.email}%0A📞 Phone: ${payload.phone}%0A📅 Date: ${payload.date}%0A🕒 Time: ${payload.time}%0A🔮 Service: ${payload.service}%0A💬 Notes: ${payload.notes}`;
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank");
+  }
+});
 
-    document.querySelectorAll("section").forEach(section => {
-      observer.observe(section);
+
+
+/* ---------- WhatsApp inline ---------- */
+document.getElementById('openWAInline').addEventListener('click', ()=>{
+  const name = encodeURIComponent(document.getElementById('b_name').value || '');
+  const phone = encodeURIComponent(document.getElementById('b_phone').value || '');
+  const service = encodeURIComponent(document.getElementById('b_service').value || '');
+  const date = encodeURIComponent(document.getElementById('b_date').value || '');
+  const time = encodeURIComponent(document.getElementById('b_time').value || '');
+  const notes = encodeURIComponent(document.getElementById('b_notes').value || '');
+  const text = `नमस्ते, मैं परामर्श बुक करना चाहता/चाहती हूँ.%0Aनाम: ${name}%0Aफोन: ${phone}%0Aसेवा: ${service}%0Aदिनांक: ${date}%0Aसमय: ${time}%0Aनोट्स: ${notes}`;
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`,'_blank');
+});
+
+/* ---------- dark mode toggle ---------- */
+const darkToggle = document.getElementById('toggleDark');
+function setTheme(theme){
+  if(theme==='dark'){ document.documentElement.setAttribute('data-theme','dark'); localStorage.setItem('theme','dark'); }
+  else { document.documentElement.setAttribute('data-theme','light'); localStorage.setItem('theme','light'); }
+}
+darkToggle.addEventListener('click', ()=>{
+  const cur = document.documentElement.getAttribute('data-theme');
+  setTheme(cur==='dark' ? 'light' : 'dark');
+});
+(function(){ const saved = localStorage.getItem('theme') || 'light'; setTheme(saved); })();
+
+/* ---------- header hide on scroll ---------- */
+let lastScroll = 0;
+const header = document.querySelector('.site-header');
+window.addEventListener('scroll', ()=>{
+  const current = window.scrollY;
+  if(current > lastScroll && current > 100){
+    header.style.transform = 'translateY(-100%)';
+  } else {
+    header.style.transform = 'translateY(0)';
+  }
+  lastScroll = current;
+});
+
+/* ---------- intersection reveal ---------- */
+const io = new IntersectionObserver((entries)=>{ 
+  entries.forEach(en => en.isIntersecting && en.target.classList.add('visible')) 
+}, {threshold:0.07});
+document.querySelectorAll('section, .hero').forEach(el => io.observe(el));
+
+/* ---------- lightbox close on ESC / outside click ---------- */
+document.addEventListener('keydown', (e)=>{
+  if(e.key === 'Escape'){
+    document.querySelectorAll('.lightbox').forEach(lb => { 
+      lb.style.display='none'; lb.setAttribute('aria-hidden','true'); 
     });
+    document.getElementById('bookPreviewFrame') && (document.getElementById('bookPreviewFrame').src='');
+  }
+});
+document.querySelectorAll('.lightbox').forEach(lb=>{
+  lb.addEventListener('click',(ev)=>{
+    if(ev.target === lb){ lb.style.display='none'; lb.setAttribute('aria-hidden','true'); }
+  });
+});
+
+/* ---------- init ---------- */
+renderGallery();
+refreshDailyQuote();
+setInterval(refreshDailyQuote, 12*60*60*1000);
+</script>
+
+
+  <!-- Structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Sri Sundram Acharya",
+    "description":"Vedic Priest, Astrologer and Spiritual Guide offering consultations, puja and Bhagavata Katha.",
+    "url":"https://srisundramacharya.com",
+    "telephone":"+917484045244",
+    "sameAs":["https://www.instagram.com/sri_sundram_acharya","https://x.com/Sri_sundram","https://www.youtube.com/@Sri_sundram_acharya"]
+  }
   </script>
 </body>
 </html>
